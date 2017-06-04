@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="trainedge.qaapp">
+    package="trainedge.qaadmin">
 
     <application
         android:allowBackup="true"
@@ -18,8 +18,18 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".SignupActivity" />
-        <activity android:name=".ResultActivity"></activity>
+        <activity
+            android:name=".QuesUpdateActivity"
+            android:label="@string/title_activity_ques_update"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".QuesEditActivity"
+            android:label="@string/title_activity_ques_edit"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".AdminHomeActivity"
+            android:label="@string/title_activity_admin_home"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>

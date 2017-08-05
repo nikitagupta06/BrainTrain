@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">QA Admin</string>
+    <string name="app_name">BrainTrain (Admin)</string>
     <string name="action_settings">Settings</string>
     <string name="title_activity_ques_update">QuesUpdateActivity</string>
     <string name="large_text">
@@ -93,4 +93,11 @@
     </string>
     <string name="title_activity_ques_edit">QuesEditActivity</string>
     <string name="title_activity_admin_home">AdminHomeActivity</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="title_activity_question">Question</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

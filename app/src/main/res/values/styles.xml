@@ -3,9 +3,9 @@
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
         <!-- Customize your theme here. -->
-        <item name="colorPrimary">@color/teal</item>
-        <item name="colorPrimaryDark">@color/pink</item>
-        <item name="colorAccent">@android:color/holo_blue_light</item>
+        <item name="colorPrimary">#7c37b7</item>
+        <item name="colorPrimaryDark">#bf94ff</item>
+        <item name="colorAccent">#f50f95</item>
     </style>
 
     <style name="AppTheme.NoActionBar">
@@ -16,5 +16,17 @@
     <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
 
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="Test" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">#211B2A</item>
+        <item name="colorPrimaryDark">#F0EBDB</item>
+    </style>
+    <!-- ... -->
+    <string name="facebook_application_id" translatable="false">APP_ID</string>
+    <!-- Facebook Application ID, prefixed by 'fb'.  Enables Chrome Custom tabs. -->
+    <string name="facebook_login_protocol_scheme" translatable="false">fbAPP_ID</string>
+    <string name="twitter_consumer_key" translatable="false">YOURCONSUMERKEY</string>
+    <string name="twitter_consumer_secret" translatable="false">YOURCONSUMERSECRET</string>
+
 
 </resources>

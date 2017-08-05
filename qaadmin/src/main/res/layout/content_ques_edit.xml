@@ -5,8 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="trainedge.qaadmin.QuesEditActivity"
-    tools:showIn="@layout/activity_ques_edit">
+    tools:context="trainedge.qaadmin.EditQuestionActivity"
+    tools:showIn="@layout/activity_edit_question">
 
     <LinearLayout
         android:orientation="vertical"
@@ -76,9 +76,9 @@
         </android.support.design.widget.TextInputLayout>
 
         <Spinner
+            android:id="@+id/spinner_answer"
             android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:id="@+id/spinner_answer" />
+            android:layout_height="50dp" />
 
         <Button
             android:text="Save"

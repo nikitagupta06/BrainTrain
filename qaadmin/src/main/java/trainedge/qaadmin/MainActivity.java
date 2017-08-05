@@ -1,10 +1,9 @@
 package trainedge.qaadmin;
 
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
@@ -31,6 +30,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private String admin_password;
     private FirebaseAuth mAuth;
     private FirebaseAuth.AuthStateListener mAuthListener;
+    private ProgressDialog dialog;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,21 +39,33 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
+
         mAuth = FirebaseAuth.getInstance();
+
+
 
         mAuthListener = new FirebaseAuth.AuthStateListener() {
             @Override
             public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
+                //hide progress
+                if (dialog!=null && dialog.isShowing()) {
+                    dialog.dismiss();
+                }
+                // ...
                 FirebaseUser user = firebaseAuth.getCurrentUser();
                 if (user != null) {
-                    Intent intent=new Intent(MainActivity.this,QuesUpdateActivity.class);
+
+
+                    Intent intent=new Intent(MainActivity.this,CategoriesActivity.class);
                     startActivity(intent);
                     finish();
+
                     // User is signed in
                 } else {
                     // User is signed out
                 }
-                // ...
+
+
             }
         };
 
@@ -90,8 +102,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     @Override
     public void onClick(View v) {
+        //show progress
+         dialog = new ProgressDialog(this);
+        dialog.setMessage("Loading..");
+        dialog.setCancelable(false);
+        dialog.show();
+
         admin_email = et_email.getText().toString();
         admin_password = et_password.getText().toString();
+
 
         mAuth.signInWithEmailAndPassword(admin_email, admin_password)
                 .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
@@ -109,6 +128,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                         // ...
                     }
                 });
+
 
     }
     @Override

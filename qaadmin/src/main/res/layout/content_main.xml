@@ -31,7 +31,8 @@
         android:layout_marginTop="78dp"
         android:id="@+id/et_email"
         android:hint="Email"
-        android:background="@drawable/edit_boder" />
+        android:background="@drawable/edit_boder"
+        android:layout_alignEnd="@+id/btn_login" />
 
     <EditText
         android:layout_width="300dp"
@@ -44,7 +45,8 @@
         android:id="@+id/et_password"
         android:hint="Password:"
         android:fontFamily="sans-serif-smallcaps"
-        android:background="@drawable/edit_boder" />
+        android:background="@drawable/edit_boder"
+        android:layout_alignEnd="@+id/btn_login" />
 
     <Button
         android:text="Login"

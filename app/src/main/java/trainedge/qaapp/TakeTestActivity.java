@@ -5,7 +5,6 @@ import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
-import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
@@ -23,12 +22,11 @@ public class TakeTestActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-
         mViewPager = (ViewPager) findViewById(R.id.container);
         QAdapter adapter=new QAdapter(getSupportFragmentManager());
         mViewPager.setAdapter(adapter);
-        TabLayout tabLayout = (TabLayout) findViewById(R.id.tabs);
-        tabLayout.setupWithViewPager(mViewPager);
+
+
     }
 
     public class QAdapter extends FragmentPagerAdapter {
@@ -57,12 +55,11 @@ public class TakeTestActivity extends AppCompatActivity {
         public CharSequence getPageTitle(int position) {
             switch (position) {
                 case 0:
-                    return "Test";
+                    return "Previous Question";
                 case 1:
-                    return "Practice";
+                    return "Next Question";
             }
             return super.getPageTitle(position);
         }
     }
-
 }

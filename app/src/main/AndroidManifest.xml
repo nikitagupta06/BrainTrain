@@ -39,6 +39,10 @@
         <activity
             android:name=".HelpActivity"
             android:label="@string/title_activity_help"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".TestQuesActivity"
+            android:label="@string/title_activity_test_ques"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 

@@ -89,7 +89,7 @@ public class PracticeFragment extends Fragment implements ValueEventListener {
             //step6.1
             btn_start = (Button) itemView.findViewById(R.id.btn_start);
             tv_subject = (TextView) itemView.findViewById(R.id.tv_subject);
-            tv_marks = (TextView) itemView.findViewById(R.id.tv_marks);
+            tv_marks = (TextView) itemView.findViewById(R.id.tv_qno);
             marks = (TextView) itemView.findViewById(R.id.marks);
             tv_duration = (TextView) itemView.findViewById(R.id.tv_duration);
             duration = (TextView) itemView.findViewById(R.id.duration);

@@ -1,6 +1,7 @@
 package trainedge.qaapp;
 
 import android.app.ProgressDialog;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
@@ -24,6 +25,8 @@ public class TestFragment extends Fragment implements ValueEventListener {
     private ArrayList<String> subject;
     private ProgressDialog dialog;
     private TestAdapter adapter;
+    public static final String SUBJECT_NAME = "trainedge.qaapp.SUBJECT_NAME";
+
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -92,7 +95,7 @@ public class TestFragment extends Fragment implements ValueEventListener {
             //step6.1
             btn_start = (Button) itemView.findViewById(R.id.btn_start);
             tv_subject = (TextView) itemView.findViewById(R.id.tv_subject);
-            tv_marks = (TextView) itemView.findViewById(R.id.tv_marks);
+            tv_marks = (TextView) itemView.findViewById(R.id.tv_qno);
             marks = (TextView) itemView.findViewById(R.id.marks);
             tv_duration = (TextView) itemView.findViewById(R.id.tv_duration);
             duration = (TextView) itemView.findViewById(R.id.duration);
@@ -113,10 +116,18 @@ public class TestFragment extends Fragment implements ValueEventListener {
         @Override
         public void onBindViewHolder(TestHolder holder, int position) {
             //step 7.2
-            String item = subject.get(position);
+            final String item = subject.get(position);
             holder.tv_subject.setText(item);
             holder.marks.setText("10 Marks");
             holder.duration.setText("10 Min");
+            holder.btn_start.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent intent = new Intent(getActivity(), TakeTestActivity.class);
+                    intent.putExtra(SUBJECT_NAME, item);
+                    startActivity(intent);
+                }
+            });
 
         }
 

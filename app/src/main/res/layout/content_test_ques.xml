@@ -23,7 +23,7 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
                 android:fontFamily="casual"
-                android:text="TextView"
+                android:text="Ques No."
                 android:textSize="18sp"
                 android:textStyle="bold" />
 
@@ -32,6 +32,13 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp" />
+
+            <Button
+                android:id="@+id/button2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.52"
+                android:text="End Test" />
         </LinearLayout>
 
 

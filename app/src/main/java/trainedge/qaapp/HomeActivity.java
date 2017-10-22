@@ -70,6 +70,7 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
 
         cv_profile.setOnClickListener(this);
         cv_test.setOnClickListener(this);
+        cv_help.setOnClickListener(this);
 
 
     }

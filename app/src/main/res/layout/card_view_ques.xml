@@ -46,7 +46,7 @@
                     android:layout_margin="5dp"
                     android:layout_weight="1"
                     android:padding="5dp"
-                    android:text="Option a" />
+                    android:text="A" />
 
                 <RadioButton
                     android:id="@+id/rb_b"
@@ -58,7 +58,7 @@
                     android:layout_margin="5dp"
                     android:layout_weight="1"
                     android:padding="5dp"
-                    android:text="Option b" />
+                    android:text="B" />
 
                 <RadioButton
                     android:id="@+id/rb_c"
@@ -70,7 +70,7 @@
                     android:layout_margin="5dp"
                     android:layout_weight="1"
                     android:padding="5dp"
-                    android:text="Option c" />
+                    android:text="C" />
 
                 <RadioButton
                     android:id="@+id/rb_d"
@@ -82,7 +82,8 @@
                     android:layout_margin="5dp"
                     android:layout_weight="1"
                     android:padding="5dp"
-                    android:text="Option d" />
+                    android:text="D" />
+
             </RadioGroup>
         </LinearLayout>
 

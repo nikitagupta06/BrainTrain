@@ -29,10 +29,6 @@
             android:label="@string/title_activity_test"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".TakeTestActivity"
-            android:label="@string/title_activity_take_test"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity
             android:name=".MyProfileActivity"
             android:label="@string/title_activity_my_profile"
             android:theme="@style/AppTheme.NoActionBar" />

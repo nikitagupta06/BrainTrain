@@ -48,21 +48,21 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
         FirebaseUser user = firebaseAuth.getCurrentUser();
 
         cv_profile = (CardView) findViewById(R.id.cv_profile);
-        cv_dashboard = (CardView) findViewById(R.id.cv_dashboard);
+     //   cv_dashboard = (CardView) findViewById(R.id.cv_dashboard);
         cv_reports = (CardView) findViewById(R.id.cv_reports);
         cv_help = (CardView) findViewById(R.id.cv_help);
         cv_test = (CardView) findViewById(R.id.cv_test);
         cv_settings = (CardView) findViewById(R.id.cv_settings);
 
         iv_profile = (ImageView) findViewById(R.id.iv_profile);
-        iv_dashboard = (ImageView) findViewById(R.id.iv_dashboard);
+      //  iv_dashboard = (ImageView) findViewById(R.id.iv_dashboard);
         iv_reports = (ImageView) findViewById(R.id.iv_reports);
         iv_help = (ImageView) findViewById(R.id.iv_help);
         iv_test = (ImageView) findViewById(R.id.iv_test);
         iv_settings = (ImageView) findViewById(R.id.iv_settings);
 
         tv_profile = (TextView) findViewById(R.id.tv_profile);
-        tv_dashboard = (TextView) findViewById(R.id.tv_dashboard);
+       // tv_dashboard = (TextView) findViewById(R.id.tv_dashboard);
         tv_reports = (TextView) findViewById(R.id.tv_reports);
         tv_test = (TextView) findViewById(R.id.tv_test);
         tv_help = (TextView) findViewById(R.id.tv_help);
@@ -114,8 +114,8 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.cv_profile:
                 startActivity(new Intent(HomeActivity.this, MyProfileActivity.class));
                 break;
-            case R.id.cv_dashboard:
-                break;
+           // case R.id.cv_dashboard:
+             //   break;
             case R.id.cv_reports:
                 break;
             case R.id.cv_test:

@@ -123,7 +123,7 @@ public class TestFragment extends Fragment implements ValueEventListener {
             holder.btn_start.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    Intent intent = new Intent(getActivity(), TakeTestActivity.class);
+                    Intent intent = new Intent(getActivity(), TestQuesActivity.class);
                     intent.putExtra(SUBJECT_NAME, item);
                     startActivity(intent);
                 }

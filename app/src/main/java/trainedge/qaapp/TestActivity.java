@@ -8,7 +8,9 @@ import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.widget.Button;
+
+import trainedge.qaapp.Fragment.PracticeFragment;
+import trainedge.qaapp.Fragment.TestFragment;
 
 public class TestActivity extends AppCompatActivity {
 

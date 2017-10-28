@@ -1,4 +1,4 @@
-package trainedge.qaapp;
+package trainedge.qaapp.Fragment;
 
 
 import android.app.ProgressDialog;
@@ -20,6 +20,8 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
+
+import trainedge.qaapp.R;
 
 
 public class PracticeFragment extends Fragment implements ValueEventListener {

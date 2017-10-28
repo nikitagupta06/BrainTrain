@@ -1,4 +1,4 @@
-package trainedge.qaapp;
+package trainedge.qaapp.Model;
 
 /**
  * Created by Nikita on 11-Jul-17.

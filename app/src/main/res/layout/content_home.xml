@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/bg"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context="trainedge.qaapp.HomeActivity"
     tools:showIn="@layout/activity_home">
@@ -12,20 +13,20 @@
     <ScrollView
         android:layout_width="368dp"
         android:layout_height="495dp"
-        tools:layout_editor_absoluteY="8dp"
-        tools:layout_editor_absoluteX="8dp">
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="8dp">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical" >
+            android:orientation="vertical">
 
             <android.support.v7.widget.CardView
                 android:id="@+id/cv_profile"
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
                 android:layout_margin="5dp"
-                app:cardBackgroundColor="#FF9800"
+                app:cardBackgroundColor="@color/tw__composer_red"
                 tools:layout_editor_absoluteX="8dp"
                 tools:layout_editor_absoluteY="0dp">
 
@@ -55,7 +56,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
                 android:layout_margin="5dp"
-                app:cardBackgroundColor="#9C27B0"
+                app:cardBackgroundColor="@android:color/holo_orange_light"
                 tools:layout_editor_absoluteX="8dp"
                 tools:layout_editor_absoluteY="0dp">
 
@@ -85,7 +86,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
                 android:layout_margin="5dp"
-                app:cardBackgroundColor="#3F51B5"
+                app:cardBackgroundColor="@android:color/holo_green_dark"
                 tools:layout_editor_absoluteX="8dp"
                 tools:layout_editor_absoluteY="0dp">
 
@@ -115,7 +116,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
                 android:layout_margin="5dp"
-                app:cardBackgroundColor="#F44336"
+                app:cardBackgroundColor="#3F51B5"
                 tools:layout_editor_absoluteX="8dp"
                 tools:layout_editor_absoluteY="0dp">
 
@@ -145,7 +146,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
                 android:layout_margin="5dp"
-                app:cardBackgroundColor="#CDDC39"
+                app:cardBackgroundColor="@color/colorAccent"
                 tools:layout_editor_absoluteX="8dp"
                 tools:layout_editor_absoluteY="0dp">
 
@@ -171,4 +172,5 @@
             </android.support.v7.widget.CardView>
         </LinearLayout>
     </ScrollView>
+
 </android.support.constraint.ConstraintLayout>

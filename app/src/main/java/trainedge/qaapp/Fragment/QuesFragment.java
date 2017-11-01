@@ -25,7 +25,6 @@ public class QuesFragment extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_ques, container, false);
 
-
         tv_question = (TextView) view.findViewById(R.id.tv_question);
         rb_option1 = (RadioButton) view.findViewById(R.id.rb_option1);
         rb_option2 = (RadioButton) view.findViewById(R.id.rb_option2);

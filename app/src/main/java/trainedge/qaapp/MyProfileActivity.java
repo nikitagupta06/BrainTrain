@@ -18,7 +18,7 @@ public class MyProfileActivity extends AppCompatActivity implements View.OnClick
 
     private FirebaseAuth firebaseAuth;
     private EditText et_email,et_contact,et_college,et_batch,et_eno,et_course;
-    private Button btn_save;
+    private Button btn_save,btn_back;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -60,10 +60,20 @@ public class MyProfileActivity extends AppCompatActivity implements View.OnClick
         et_eno = (EditText) findViewById(R.id.et_eno);
         btn_save = (Button) findViewById(R.id.btn_save);
         btn_save.setOnClickListener(this);
+
+//        btn_back = (Button) findViewById(R.id.btn_back);
+  //      btn_back.setOnClickListener(this);
     }
 
     @Override
     public void onClick(View v) {
+        switch(v.getId()){
+            case R.id.btn_back:
+                startActivity(new Intent(this, HomeActivity.class));
+                break;
+            case R.id.btn_save:
+                break;
+        }
 
     }
 

@@ -71,6 +71,7 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
         cv_profile.setOnClickListener(this);
         cv_test.setOnClickListener(this);
         cv_help.setOnClickListener(this);
+        cv_settings.setOnClickListener(this);
 
 
     }
@@ -125,6 +126,7 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
                 startActivity(new Intent(HomeActivity.this, HelpActivity.class));
                 break;
             case R.id.cv_settings:
+                startActivity(new Intent(HomeActivity.this, SettingActivity.class));
                 break;
         }
     }

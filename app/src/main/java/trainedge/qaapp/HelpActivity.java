@@ -1,5 +1,6 @@
 package trainedge.qaapp;
 
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
@@ -12,6 +13,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioButton;
+import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;
 
@@ -21,6 +24,7 @@ public class HelpActivity extends AppCompatActivity implements View.OnClickListe
     private Button btn_send;
     private FirebaseAuth firebaseAuth;
     private RadioButton rb_tech, rb_admin;
+    private TextView tv_choose;
 
 
     @Override
@@ -30,7 +34,7 @@ public class HelpActivity extends AppCompatActivity implements View.OnClickListe
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        et_choose = (EditText) findViewById(R.id.et_subject);
+        tv_choose = (TextView) findViewById(R.id.tv_subject);
         et_subject = (EditText) findViewById(R.id.et_subject);
         et_msg = (EditText) findViewById(R.id.et_msg);
         btn_send = (Button) findViewById(R.id.btn_send);
@@ -42,7 +46,26 @@ public class HelpActivity extends AppCompatActivity implements View.OnClickListe
 
     @Override
     public void onClick(View v) {
+        //show progress
+        final ProgressDialog dialog = new ProgressDialog(this);
+        dialog.setMessage("Sending..");
+        dialog.setCancelable(false);
+        dialog.show();
+        Toast.makeText(this, "Message Sent", Toast.LENGTH_SHORT).show();
 
+        String var = et_subject.getText().toString().trim();
+        if (var.isEmpty()) {
+            et_subject.setError("Enter Subject!");
+            return;
+        }
+        String var1 = et_msg.getText().toString().trim();
+        if (var1.isEmpty()) {
+            et_msg.setError("Enter your message!");
+            return;
+        }
+
+
+        dialog.dismiss();
     }
 
     @Override
